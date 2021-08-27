@@ -21,9 +21,9 @@ async function main() {
     "0xeB230bF62267E94e657b5cbE74bdcea78EB3a5AB"
   );
 
-  await greeter.deployed();
+  await nft.deployed();
 
-  console.log("Greeter deployed to:", greeter.address);
+  console.log("NFT deployed to:", nft.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
