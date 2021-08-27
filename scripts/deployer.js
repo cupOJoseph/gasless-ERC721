@@ -15,7 +15,7 @@ async function main() {
 
   // We get the contract to deploy
   const GaslessNFT = await hre.ethers.getContractFactory("GaslessNFT");
-  const nft = await Greeter.deploy(
+  const nft = await GaslessNFT.deploy(
     "Gasless NFT",
     "GNFT",
     "0xeB230bF62267E94e657b5cbE74bdcea78EB3a5AB"
