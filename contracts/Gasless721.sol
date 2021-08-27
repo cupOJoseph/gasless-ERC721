@@ -3,6 +3,8 @@
 
   import "@openzeppelin/contracts/metatx/ERC2771Context.sol";
   import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+  import "@openzeppelin/contracts/utils/Counters.sol";
+
 
   contract GaslessNFT is ERC2771Context, ERC721 {
 
@@ -20,8 +22,10 @@
         returns (bytes calldata) {
         return ERC2771Context._msgData();
     }
+    using Counters for Counters.Counter;
+    Counters.Counter private _tokenIds;
 
-    function awardItem(address player, string memory tokenURI)
+    function awardItem(address player)
         public
         returns (uint256)
     {
@@ -29,7 +33,6 @@
 
         uint256 newItemId = _tokenIds.current();
         _mint(player, newItemId);
-        _setTokenURI(newItemId, tokenURI);
 
         return newItemId;
     }
