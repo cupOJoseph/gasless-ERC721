@@ -5,6 +5,8 @@
   import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
   import "@openzeppelin/contracts/utils/Counters.sol";
 
+  import "@opengsn/contracts/src/BaseRelayRecipient.sol";
+
 
   contract GaslessNFT is ERC2771Context, ERC721 {
 
