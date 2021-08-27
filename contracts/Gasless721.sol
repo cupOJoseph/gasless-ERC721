@@ -20,4 +20,17 @@
         returns (bytes calldata) {
         return ERC2771Context._msgData();
     }
+
+    function awardItem(address player, string memory tokenURI)
+        public
+        returns (uint256)
+    {
+        _tokenIds.increment();
+
+        uint256 newItemId = _tokenIds.current();
+        _mint(player, newItemId);
+        _setTokenURI(newItemId, tokenURI);
+
+        return newItemId;
+    }
   }
