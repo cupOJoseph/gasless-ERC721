@@ -10,6 +10,8 @@ npx hardhat compile
 npx hardhat clean
 npx hardhat test
 npx hardhat node
-node scripts/sample-script.js
+node scripts/deployer.js
 npx hardhat help
 ```
+
+Currently deployed on Ropsten 0x5FbDB2315678afecb367f032d93F642f64180aa3
