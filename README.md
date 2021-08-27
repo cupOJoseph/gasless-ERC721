@@ -14,4 +14,5 @@ node scripts/deployer.js
 npx hardhat help
 ```
 
-Currently deployed on Ropsten 0x5FbDB2315678afecb367f032d93F642f64180aa3
+Currently deployed on Ropsten 0xa640d2159e4e301d98348568091a056070aa4905
+https://oneclickdapp.com/escape-diploma
